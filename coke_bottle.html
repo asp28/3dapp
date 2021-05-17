@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel='stylesheet' type='text/css' href='assets/css/x3dom.css'>
+    </link>
+    <script type='text/javascript' src='assets/js/x3dom.js'></script>
+</head>
+<body>
+    <x3d id="model" x='0px' y='0px' style="width:450px; height:450px;">
+        <scene>
+        <inline nameSpaceName="model" mapDEFToID="True" url="assets/models/coke_bottle.x3d"></inline>
+        </scene>
+    </x3d>
+
+    <div id="interaction" class="row m-3">
+        <div id="controls" class="col-sm-4 shadow">
+            <h3>View controls</h3>
+            <a class="btn btn-info m-1" href="#" onclick="cameraFront();">Front</a>
+            <a class="btn btn-info m-1" href="#" onclick="cameraBack();">Back</a>
+            <a class="btn btn-info m-1" onclick="cameraLeft();">Left</a>
+            <a class="btn btn-info m-1" onclick="cameraRight();">Right</a>
+            <a class="btn btn-info m-1" onclick="cameraTop();">Top</a>
+            <a class="btn btn-info m-1" onclick="cameraBottom();">Bottom</a>
+        </div>
+        <div id="animations" class="col-sm-4 shadow">
+            <h3>Animation controls</h3>
+        <a href="#" class="btn btn-info m-1" onclick="animateModel();">Animate</a>
+        <a href="#" class="btn btn-info m-1" onclick="stopRotation();">Stop</a>
+        </div>
+        <div id="render" class="col-sm-4 shadow">
+            <h3>Render controls</h3>
+        <a href="#" class="btn btn-info m-1" onclick="headlight();">Headlight</a>
+        <a href="#" class="btn btn-info m-1" onclick="wireframe();">Wireframe</a>
+        <a href="#" class="btn btn-info m-1" onclick="omniLight();">Omni</a>
+        <a href="#" class="btn btn-info m-1" onclick="setDefault();">Default</a>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.5.1.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/modelInteractions.js"></script>
+</body>
+</html>
